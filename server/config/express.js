@@ -5,6 +5,7 @@ var express = require('express'),
   bodyParser = require('body-parser'),
   methodOverride = require('method-override'),
   session = require('express-session'),
+  flash = require('connect-flash'),
   passport = require('passport'),
   router = require('../server.routes');
 
@@ -29,6 +30,7 @@ module.exports = function() {
     secret: 'Ju$tCh3ck1ng'
   }));
   
+  app.use(flash());
   app.use(passport.initialize());
   app.use(passport.session());
   app.use(router());

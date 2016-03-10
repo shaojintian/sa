@@ -6,9 +6,15 @@
 	<meta name="Kevin He" content="content" />
 	<!-- Document Title
 	============================================= -->
-	<title>title</title>
+	<title><%= title %></title>
 </head>
   <body>
-  	index
+  	<% if ( userFullName ) { %>
+        <h2>Hello <%=userFullName%> </h2> 
+        <a href="/signout">Sign out</a>
+      <% } else { %>
+        <a href="/signup">Signup</a>
+        <a href="/signin">Signin</a>
+    <% } %>
   </body>
 </html>
