@@ -1,0 +1,39 @@
+      <header id="header" class="full-header">
+
+        <div id="header-wrap">
+
+          <div class="container clearfix">
+
+            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+            <div id="logo">
+              <a href="/" class="standard-logo" data-dark-logo="images/supercarsta.png"><img src="images/supercarsta.png" alt="SuperCarsta Logo"/></a>
+            </div>
+
+            <nav id="primary-menu" class="style-3">
+
+              <ul>
+                <li class="current"><a href="#" data-toggle="modal" data-target="#myModal"><div>
+                <%if(user){%>
+                <%=user.user_name%>
+                <%}else{%>
+                  LOGIN
+                <%}%>
+                </div></a></li>
+
+              </ul>
+
+              <div id="top-search">
+                <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                <form action="search.html" method="get">
+                  <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.."/>
+                </form>
+              </div>
+
+            </nav>
+
+          </div>
+
+        </div>
+
+      </header>
