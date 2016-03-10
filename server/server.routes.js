@@ -2,12 +2,10 @@ var express = require('express');
 var passport = require('passport');
 
 module.exports = function() {
-  var router = express.Router();
-  var index = require('./controllers/indexController');
+  	var router = express.Router();
 
-  router.get('/',function(req,res){
-    res.render('index');
-  });
-
-  return router;
+  	require('./routes/index.routes.js')(router);
+	require('./routes/user.routes.js')(router);
+  
+  	return router;
 };

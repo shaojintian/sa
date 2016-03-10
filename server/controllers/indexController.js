@@ -1,8 +1,9 @@
 exports.render = function(req, res) {
 
-  req.session.lastVisit = new Date();
+	if (req.session.lastVisit) {
+    	console.log(req.session.lastVisit);
+  	}
 
-  res.render('index', {
-    page: 'Home'
-  });
+  	req.session.lastVisit = new Date();
+
 };
