@@ -4,11 +4,30 @@
 
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<meta name="Kevin He" content="content" />
+  <link href="css/style.min.css" rel="stylesheet" type="text/css"/>
+
 	<!-- Document Title
 	============================================ -->
-	<title><%= title %></title>
+	<title>index</title>
 </head>
   <body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Page 1</a></li>
+          <li><a href="#">Page 2</a></li> 
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+
+
+
   	<% if ( userFullName ) { %>
         <h2>Hello <%=userFullName%> </h2> 
         <a href="/signout">Sign out</a>
