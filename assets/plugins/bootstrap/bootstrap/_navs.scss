@@ -20,10 +20,24 @@
       position: relative;
       display: block;
       padding: $nav-link-padding;
+      margin: 5px 10px;
+      &:hover :not(.button),
+      &:focus :not(.button){
+        background-color: $nav-link-hover-bg;
+      }
       &:hover,
       &:focus {
         text-decoration: none;
-        background-color: $nav-link-hover-bg;
+      }
+
+      @media (min-width: $grid-float-breakpoint) {
+        margin: 0px 5px;
+      }
+
+      &.button{
+        @media (min-width: $grid-float-breakpoint) {
+          margin: ($navbar-height - $line-height-computed - 20)/2 10px;
+        }
       }
     }
 

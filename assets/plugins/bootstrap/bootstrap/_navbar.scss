@@ -219,7 +219,7 @@
   }
 
   @media (min-width: $grid-float-breakpoint) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -236,6 +236,15 @@
     padding-top:    10px;
     padding-bottom: 10px;
     line-height: $line-height-computed;
+    height: $line-height-computed + 20;
+    
+    &:not(.button){color: $navbar-default-link-color;}
+
+    &:hover:not(.button),
+    &:focus:not(.button){
+      color:$navbar-default-link-hover-color;
+    }
+
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
@@ -266,10 +275,10 @@
   @media (min-width: $grid-float-breakpoint) {
     float: left;
     margin: 0;
-
     > li {
       float: left;
-      > a {
+      > a:not(.button) {
+        height: $navbar-height;
         padding-top:    $navbar-padding-vertical;
         padding-bottom: $navbar-padding-vertical;
       }
@@ -341,7 +350,7 @@
 // Vertically center a button within a navbar (when *not* in a form).
 
 .navbar-btn {
-  @include navbar-vertical-align($input-height-base);
+  @include navbar-vertical-align($ubtn-nav-height);
 
   &.btn-sm {
     @include navbar-vertical-align($input-height-small);
@@ -412,20 +421,14 @@
   }
 
   .navbar-nav {
-    line-height:$navbar-height;
-    > li > a {
+    > li > a :not(.button){
       color: $navbar-default-link-color;
-      display:inline-block;
-      line-height:$font-size-base; 
-      border-radius:$border-radius-base;
-      font-weight:$navbar-default-link-font-weight;
-      opacity:$navbar-default-link-opacity;
+      opacity: 0.9;
       &:hover,
       &:focus {
-        color: $navbar-default-link-active-color;
-        opacity:$navbar-default-link-hover-opacity;
-        background-color: $navbar-default-link-active-bg;
-        box-shadow: $navbar-default-link-active-box-shadow;
+        color: $navbar-default-link-hover-color;
+        background-color: $navbar-default-link-hover-bg;
+        opacity: 1;
       }
     }
     > .active > a {
@@ -434,7 +437,6 @@
       &:focus {
         color: $navbar-default-link-active-color;
         background-color: $navbar-default-link-active-bg;
-        box-shadow: $navbar-default-link-active-box-shadow;
       }
     }
     > .disabled > a {
@@ -447,7 +449,7 @@
     }
   }
 
-  .navbar-toggle {
+  .navbar-toggle:not(.button){
     border-color: $navbar-default-toggle-border-color;
     &:hover,
     &:focus {
