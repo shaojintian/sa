@@ -10,6 +10,13 @@
   	.signup_cards_container{
   		max-width:	1024px;
   		margin: 0 auto;
+
+  		@media (min-width: $grid-float-breakpoint) {
+    		background-image: url('../img/thinLine.png');
+    		background-position: 49.8%;
+    		background-repeat: no-repeat;
+    		background-size: 1px 85%;
+  		}
   	}
 
   	.signup_card_container{
