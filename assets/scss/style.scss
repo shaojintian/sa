@@ -3,4 +3,7 @@
 @import "../plugins/buttons/buttons";
 
 //custom components
-@import "./custom/footer";
+@import "./components/footer";
+
+//custom page specific files
+@import "./pages/signup";

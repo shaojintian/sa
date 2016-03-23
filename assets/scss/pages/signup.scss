@@ -1,0 +1,78 @@
+.signup_cards{
+	background-color: 	$light-grey;
+	margin-bottom:		0px;
+	border-bottom: 		1px solid $border-color;
+
+	@media (min-width: $grid-float-breakpoint) {
+    	margin-bottom:		50px;
+  	}
+
+  	.signup_cards_container{
+  		max-width:	1024px;
+  		margin: 0 auto;
+  	}
+
+  	.signup_card_container{
+  		padding-left: 10px;
+    	padding-right: 10px;
+    	width: 100%;
+    	display: inline-block;
+
+    	@media (min-width: $grid-float-breakpoint) {
+    		width: 49.6%;
+  		}
+  	}
+
+  	.card{
+  		padding: 36px 20px 54px;
+    	position: relative;
+  		background-color: 	$light-grey;
+  		margin-bottom: 30px;
+
+  		@media (min-width: $grid-float-breakpoint) {
+    		margin-bottom: 0px;
+
+    		&:hover{
+    			transform: scale(1.045) rotate(0.0001deg);
+    			background-color: #FFFFFF;
+    			box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.15);
+    			transition-property: all;
+    			transition-duration: 220ms;
+    		}
+  		}
+
+  		.button{
+  			margin-top:20px;
+  		}
+  	}
+
+  	.card_image{
+  		height: 155px;
+    	width: 268px;
+    	margin: 0 auto 20px;
+    	background-repeat: no-repeat;
+  	}
+
+  	.signup_card_image1{
+  		background-image: url('../img/signup_card_image1.png');
+  		background-size: 282px 155px;
+    	background-position: center 30px;
+    	height: 185px;	
+  	}
+
+  	.signup_card_image2{
+  		background-image: url('../img/signup_card_image2.png');
+  		background-size: 250px 162px;
+    	background-position: center 25px;
+    	height: 185px;	
+  	}
+
+  	.card_title{
+  		font-size: $font-size-h3;
+    	line-height: 48px;
+    	margin-bottom: 0;
+    	margin-top: 0;
+    	font-weight: 900;
+  	}
+
+}

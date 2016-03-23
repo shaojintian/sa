@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>
-    <%=title %>
-  </title>
-</head>
-<body>
-  <% for(var i in messages) { %>
-    <div class="flash"><%= messages[i] %></div>
-  <% } %>
-  <form action="/signup" method="post">
-    <div>
-      <label>First Name:</label>
-      <input type="text" name="firstName" />
-    </div>
-    <div>
-      <label>Last Name:</label>
-      <input type="text" name="lastName" />
-    </div>
-    <div>
-      <label>Email:</label>
-      <input type="text" name="email" />
-    </div>
-    <div>
-      <label>Username:</label>
-      <input type="text" name="username" />
-    </div>
-    <div>
-      <label>Password:</label>
-      <input type="password" name="password" />
-    </div>
-    <div>
-      <input type="submit" value="Sign up" />
-    </div>
-  </form>
-</body>
+  <head>
+    <%- include('./partials/head') %>
+  </head>
+  <body>
+    <%- include('./partials/header') %>
+
+    <section class="signup_cards">
+      <div class="signup_cards_container">
+        <div class="signup_card_container">
+          <div class="card text-center">
+            <div class="card_image signup_card_image1">
+              
+            </div>
+            <div class="card_title">
+              我是学生
+            </div>
+            <div class="card_description">
+              card description
+            </div>
+            <a href="/signup/student" class="button button-large button-rounded button-red">免费注册</a>
+          </div>
+        </div>
+        <div class="signup_card_container">
+          <div class="card text-center">
+            <div class="card_image signup_card_image2">
+              
+            </div>
+            <div class="card_title">
+              我是导师
+            </div>
+            <div class="card_description">
+              card description2
+            </div>
+            <a href="/signup/agent" class="button button-large button-rounded button-red">免费注册</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+
+    <%- include('./partials/footer') %>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+  </body>
 </html>

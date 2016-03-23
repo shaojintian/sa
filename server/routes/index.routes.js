@@ -3,7 +3,7 @@ module.exports = function(router) {
 
     router.get('/',function(req,res){
     	res.render('index',{
-		    title: 'Hello World',
+		    title: '主页标题',
 		    userFullName: req.user ? req.user.fullName : ''
 		});
   	});
