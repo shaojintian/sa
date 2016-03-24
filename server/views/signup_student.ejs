@@ -6,13 +6,66 @@
   <body>
     <%- include('./partials/header') %>
 
-    <h1>separater.</h1>
+    <section>
+
+    	<div class="container">
+    		<div class="form-container">
+    			
+    			<!-- START PANEL -->
+                <div class="panel panel-default">
+                  <div class="panel-heading  text-center">
+                    <div class="panel-title">
+                      logo
+                    </div>
+                  </div>
+                  <div class="panel-body">
+                    
+                    <form role="form">
+                      <div class="form-group">
+                        <input type="email" class="form-control input-lg" placeholder="您的名字" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="password" class="form-control input-lg" placeholder="密码" required>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control input-lg" placeholder="Email" required>
+                      </div>
+                      <div class="form-group">
+                      <a href="/" class="button button-block button-rounded button-large button-ocean">注册</a>
+                      </div>
+                      <div class="privacy-field">
+                      <p>点击注册，即同意我们的 <a href="/">用户隐私条款</a></p>
+                      <p><a href="/">已有账号？登录</a></p>
+                      </div>
+                      <hr>
+                      <div class="form-group">
+                      <a href="/" class="button button-block button-rounded button-border button-large button-wechat"><i class="fa fa-weixin"></i> 微信 登录</a>
+                      </div>
+                      <div class="form-group">
+                      <a href="/" class="button button-block button-rounded button-border button-large button-weibo"><i class="fa fa-weibo"></i> 微博 登录</a>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <!-- END PANEL -->
+
+
+
+
+
+    		</div>
+    	</div>
+
+    </section>
 
     <%- include('./partials/footer') %>
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="/plugins/bootstrap/js/bootstrap.min.js"></script>
+
   </body>
 </html>

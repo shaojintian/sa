@@ -68,9 +68,9 @@
   	}
 
   	.signup_card_image2{
-  		background-image: url('../img/man1.png');
-  		background-size: 150px 230px;
-    	background-position: center;
+  		background-image: url('../img/teacher_male_1.png');
+  		background-size: 140px 230px;
+    	background-position: 55px;
     	height: 230px;	
   	}
 
@@ -81,5 +81,24 @@
     	margin-top: 0;
     	font-weight: 900;
   	}
+
+}
+
+.form-container{
+  padding:    50px 10px;
+  max-width:  675px;
+  margin:     auto;
+
+  @media (min-width: $grid-float-breakpoint) {
+    padding:    50px 100px;
+  }
+}
+
+form{
+  .privacy-field{
+    font-size:$font-size-h6;
+    text-align:right;
+    color:$color-master;
+  }
 
 }

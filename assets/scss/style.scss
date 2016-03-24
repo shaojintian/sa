@@ -1,6 +1,7 @@
 @import "./var";
 @import "../plugins/bootstrap/bootstrap";
 @import "../plugins/buttons/buttons";
+@import "../plugins/font-awesome/font-awesome";
 
 //mixins
 @import "./mixins";
@@ -8,6 +9,7 @@
 //custom components
 @import "./components/footer";
 @import "./components/form_elements";
+@import "./components/panels";
 
 //custom page specific files
 @import "./pages/signup";
