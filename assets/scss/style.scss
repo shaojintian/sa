@@ -2,8 +2,12 @@
 @import "../plugins/bootstrap/bootstrap";
 @import "../plugins/buttons/buttons";
 
+//mixins
+@import "./mixins";
+
 //custom components
 @import "./components/footer";
+@import "./components/form_elements";
 
 //custom page specific files
 @import "./pages/signup";

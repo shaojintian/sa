@@ -6,6 +6,9 @@ module.exports = function(router) {
     	.get(users.renderSignup)
      	.post(users.signup);
 
+    router.route('/signup/student')
+    	.get(users.renderSignupStudent);
+
     router.route('/signin')
      	.get(users.renderSignin)
      	.post(passport.authenticate('local', {

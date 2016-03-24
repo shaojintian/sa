@@ -42,6 +42,16 @@ exports.renderSignup = function(req, res, next) {
     return res.redirect('/');
   }
 };
+exports.renderSignupStudent = function(req, res, next) {
+  if (!req.user) {
+    res.render('signup_student', {
+      title: '学生免费注册',
+      messages: req.flash('error')
+    });
+  } else {
+    return res.redirect('/');
+  }
+}
 
 exports.signup = function(req, res, next) {
   if (!req.user) {
