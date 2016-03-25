@@ -3,11 +3,12 @@ var passport = require('passport');
 module.exports = function(router) {
 
     router.route('/signup')
-    	.get(users.renderSignup)
-     	.post(users.signup);
+    	.get(users.renderSignup);
+     	
 
     router.route('/signup/student')
-    	.get(users.renderSignupStudent);
+    	.get(users.renderSignupStudent)
+      .post(users.signup);
 
     router.route('/signin')
      	.get(users.renderSignin)

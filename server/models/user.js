@@ -3,18 +3,16 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var UserSchema = new Schema({
-  firstName: String,
-  lastName: String,
+  name: {
+    type: String,
+    required: 'Name is required'
+  },
   email: {
     type: String,
-    index: true,
-    match: [/.+\@.+\..+/, "Please fill a valid e-mail address"]
-  },
-  username: {
-    type: String,
-    trim: true,
     unique: true,
-    required: 'Username is required',
+    index: true,
+    match: [/.+\@.+\..+/, "Please fill a valid e-mail address"],
+    required: 'Email is required'
   },
   salt: {
     type: String
@@ -36,8 +34,12 @@ var UserSchema = new Schema({
   },
   role: {
     type: String,
-    enum: ['Admin', 'Owner', 'User']
+    enum: ['Student', 'Agent']
   },
+  created: {
+    type: Date,
+    default: Date.now
+  }
 });
 
 UserSchema.virtual('fullName').get(function() {

@@ -14,10 +14,13 @@ $font-family-base:        	$font-family-Yahei;
 $font-size-base:          	16px;
 
 //****************** Colors ******************************
+$brand-coral:		#ff5a5f;
 $brand-navy:		#02546E;
 $brand-red:			#F16651;
 $brand-ocean:		#5FC8D7;
+$brand-green:		#00f300;
 $brand-yellow:		#FAB117;
+
 
 $border-color:		#E3E3E3;
 
@@ -28,15 +31,15 @@ $grey-text:			#626262;
 $light-grey:		#F4F7FA;
 
 
-$brand-primary:	$brand-navy;
+$brand-primary:	$brand-coral;
 $brand-danger:	$brand-red;
-$brand-success: $brand-ocean;
+$brand-success: $brand-green;
 $brand-info:	$brand-ocean;
 $brand-warning:	$brand-yellow;
 
 //thrid vendors
 $wechat-color: 	#4EAF46;
-$weibo-color:	#E32529;
+$weibo-color:	#F29600;
 
 
 //****************** Navbar ******************************
@@ -57,7 +60,7 @@ $ubtn-font-size: 	$font-size-base;
 $ubtn-font-weight: 	$button-font-weight;
 $btn-font-weight:	$button-font-weight;
 
-$ubtn-colors: ('primary' $brand-primary  #FFF) ('red' $brand-red  #FFF) ('yellow' $brand-yellow #FFF) ('ocean' $brand-ocean #FFF) ('wechat' $wechat-color #FFF) ('weibo' $weibo-color #FFF);
+$ubtn-colors: ('primary' $brand-coral  #FFF) ('red' $brand-red  #FFF) ('yellow' $brand-yellow #FFF) ('ocean' $brand-ocean #FFF) ('wechat' $wechat-color #FFF) ('weibo' $weibo-color #FFF);
 
 
 

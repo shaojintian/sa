@@ -8,7 +8,7 @@ var getErrorMessage = function(err) {
     switch (err.code) {
       case 11000:
       case 11001:
-        message = 'Username already exists';
+        message = 'Email already exists';
         break;
       default:
         message = 'Something went wrong';
@@ -56,16 +56,20 @@ exports.renderSignupStudent = function(req, res, next) {
 exports.signup = function(req, res, next) {
   if (!req.user) {
     var user = new User(req.body);
+    console.log(req.body);
+    console.log("signing up now !!!");
+
     var message = null;
 
     user.provider = 'local';
 
     user.save(function(err) {
+      console.log(user);
       if (err) {
         var message = getErrorMessage(err);
-
+        console.log(message);
         req.flash('error', message);
-        return res.redirect('/signup');
+        return res.redirect('/signup/student');//******"student for ets"
       }
       req.login(user, function(err) {
         if (err) return next(err);
