@@ -34,7 +34,7 @@ exports.renderSignin = function(req, res, next) {
 };
 exports.renderSignup = function(req, res, next) {
   if (!req.user) {
-    res.render('signup', {
+    res.render('signup_role', {
       title: '免费注册',
       messages: req.flash('error')
     });
@@ -44,8 +44,20 @@ exports.renderSignup = function(req, res, next) {
 };
 exports.renderSignupStudent = function(req, res, next) {
   if (!req.user) {
-    res.render('signup_student', {
+    res.render('signup_form', {
       title: '学生免费注册',
+      role:'Student',
+      messages: req.flash('error')
+    });
+  } else {
+    return res.redirect('/');
+  }
+};
+exports.renderSignupAgent = function(req, res, next) {
+  if (!req.user) {
+    res.render('signup_form', {
+      title: '免费注册',
+      role:'Agent',
       messages: req.flash('error')
     });
   } else {

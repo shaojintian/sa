@@ -21,7 +21,6 @@ module.exports = function() {
   app.use(express.static(path.join(__dirname, '../../assets')));
 
   app.use(cookieParser('Ju$tCh3ck1ng'));
-  app.use(bodyParser.json());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(methodOverride());
   app.use(session({

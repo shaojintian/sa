@@ -10,6 +10,10 @@ module.exports = function(router) {
     	.get(users.renderSignupStudent)
       .post(users.signup);
 
+    router.route('/signup/agent')
+      .get(users.renderSignupAgent)
+      .post(users.signup);
+
     router.route('/signin')
      	.get(users.renderSignin)
      	.post(passport.authenticate('local', {
