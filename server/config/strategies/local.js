@@ -7,9 +7,9 @@ module.exports = function() {
     usernameField: 'email',
     passwordField: 'password'
     },
-    function(username, password, done) {
+    function(email, password, done) {
     User.findOne({
-      email: username
+      email: email
     }, function(err, user) {
       if (err) {
         return done(err);
